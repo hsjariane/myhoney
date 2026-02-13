@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Valentine's 💖</title>
+
+    <!-- Mobile responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Mobile-friendly full-screen video background */
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;       /* full viewport width */
+            height: 100vh;      /* full viewport height */
+            object-fit: cover;  /* maintain aspect ratio and cover screen */
+            z-index: -2;
+        }
+
+        /* Floating hearts animation on top */
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: #ffb6c1;
+            animation: float 7s linear infinite;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg) scale(1); opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-20vh) rotate(360deg) scale(1.3); opacity: 0; }
+        }
+
+        /* Centered card with pulse animation */
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            animation: fadeInScale 1.5s ease forwards, pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.03); }
+        }
+
+        /* Heading with glow + float animation */
+        h1 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ec4899, 0 0 20px #a855f7;
+            animation: floatText 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ec4899, 0 0 20px #a855f7; }
+            to { text-shadow: 0 0 20px #ec4899, 0 0 35px #a855f7; }
+        }
+
+        @keyframes floatText {
+            0% { transform: translateY(0px);}
+            50% { transform: translateY(-10px);}
+            100% { transform: translateY(0px);}
+        }
+
+        p {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 25px;
+            text-shadow: 0 0 5px #a855f7;
+        }
+
+        /* Click button with bounce animation */
+        .btn {
+            padding: 16px;
+            width: 100%;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            animation: bounce 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: translate(-50%, -50%) scale(0.8);}
+            to { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-8px);}
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Video Background stays the same -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="heartbg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Floating hearts over video -->
+    <div class="heart" style="left:10%;">💖</div>
+    <div class="heart" style="left:25%; animation-duration:6s;">💜</div>
+    <div class="heart" style="left:40%; animation-duration:8s;">💗</div>
+    <div class="heart" style="left:60%; animation-duration:7s;">💖</div>
+    <div class="heart" style="left:75%; animation-duration:9s;">💜</div>
+    <div class="heart" style="left:90%; animation-duration:5s;">💗</div>
+
+    <!-- Centered card -->
+    <div class="centered">
+        <h1>Happy Valentine's Day Honey 🐷💜</h1>
+        <p>I made a website for you 🌸</p>
+        <button class="btn" onclick="openSurprise()">CLICK 💕</button>
+    </div>
+
+    <script>
+        function openSurprise() {
+            window.location.href = "surprise.html";
+        }
+    </script>
+
+</body>
+</html>

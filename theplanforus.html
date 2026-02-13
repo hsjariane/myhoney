@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Plan For Us 💖</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9a8d4, #c084fc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            text-shadow: 0 0 10px #ec4899, 0 0 20px #a855f7;
+            animation: floatText 3s ease-in-out infinite;
+        }
+
+        @keyframes floatText {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .message-container {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(12px);
+            border: 3px solid #ec4899;
+            border-radius: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 380px;
+            height: 450px; /* fixed height for scroll */
+            overflow-y: auto;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.6;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            animation: fadeIn 1.5s ease forwards;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scrollbar styling for mobile */
+        .message-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .message-container::-webkit-scrollbar-thumb {
+            background: #a855f7;
+            border-radius: 3px;
+        }
+
+        .message-container::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+        }
+
+        /* Magic Surprise Button */
+        .magic-btn {
+            padding: 16px;
+            width: 100%;
+            max-width: 380px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            animation: bounce 2s infinite, glow 2s ease-in-out infinite alternate;
+        }
+
+        .magic-btn:active {
+            transform: scale(0.97);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-6px);}
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 8px 20px rgba(168,85,247,0.6), 0 0 20px #ec4899; }
+            to { box-shadow: 0 12px 25px rgba(168,85,247,0.9), 0 0 30px #ec4899; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>🌷 The Plan For Us 🌷</h1>
+
+    <div class="message-container">
+        <p>
+        One of my biggest plans is to save money — not just for myself, but for us. I want to be responsible. I want to ipon little by little so one day we can buy things that will make our life more comfortable and convenient. Maybe small things at first — things for our space, things that make daily life easier. I don’t need everything to be expensive. I just want everything to feel warm and ours.
+        <br><br>
+        I imagine us having our own place someday. It doesn’t have to be big. Just somewhere quiet and safe. Somewhere we can rest after a long day. Somewhere we can cook together, laugh over small things, maybe argue about what movie to watch, and then end the night peacefully.
+        <br><br>
+        I want to grow with you. Not just in love, but in life. I want us to improve ourselves, reach our goals, finish our studies, build our careers, and support each other’s dreams. I don’t want us to rush things. I want us to build slowly but surely — step by step, with patience and understanding.
+        <br><br>
+        I want to save for our future travels too. Even simple trips. Beach days. Late-night food trips. Or even just grocery shopping together and pretending we’re already living our married life.
+        <br><br>
+        I want to be financially stable so that when problems come, we won’t panic. I want us to feel secure. I want you to feel safe with me — emotionally and someday financially too.
+        <br><br>
+        Most of all, my plan is to choose you every day. To communicate better. To handle problems maturely. To grow, not apart, but together. I don’t want a perfect relationship. I want a strong one.
+        <br><br>
+        But for now, let's focus on what we have right now. I don't want to rush things that's why I say this but to give you an idea of what my intention is.
+        <br><br>
+        Our future doesn’t need to be flashy. It just needs to be real, stable, and full of love.
+        <br><br>
+        And I’m willing to work hard for that — for us. 💗
+        </p>
+    </div>
+
+    <!-- Magic Surprise Button -->
+    <button class="magic-btn" onclick="openMagic()">✨ Magic Surprise ✨</button>
+
+    <script>
+        function openMagic() {
+            window.location.href = "magic.html"; // replace with your surprise page
+        }
+    </script>
+
+</body>
+</html>

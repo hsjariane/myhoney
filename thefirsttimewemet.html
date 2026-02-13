@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Feelings For You 💖</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9a8d4, #c084fc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            text-shadow: 0 0 10px #ec4899, 0 0 20px #a855f7;
+            animation: floatText 3s ease-in-out infinite;
+        }
+
+        @keyframes floatText {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .message-container {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(12px);
+            border: 3px solid #ec4899;
+            border-radius: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 380px;
+            height: 450px; /* fixed height for scroll */
+            overflow-y: auto;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.6;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            animation: fadeIn 1.5s ease forwards;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scrollbar styling for mobile */
+        .message-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .message-container::-webkit-scrollbar-thumb {
+            background: #a855f7;
+            border-radius: 3px;
+        }
+
+        .message-container::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+        }
+
+        /* Back button styling */
+        .back-btn {
+            padding: 16px;
+            width: 100%;
+            max-width: 380px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            animation: bounce 2s infinite;
+        }
+
+        .back-btn:active {
+            transform: scale(0.97);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-6px);}
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>💖 My Feelings For You 💖</h1>
+
+    <div class="message-container">
+        <p>
+        I met you online, and back then, you didn’t even know how much I admired you already. At first, it was just a simple crush. I found you so intimidating in a good way. You had this strong presence. The way you think, the way you talk, your mindset — it stood out to me. You weren’t just pretty. You were smart. Mature. Different.
+        <br><br>
+        For six months, I kept that crush not quietly, kasi alam kong papansin ako sa'yo but at the same time I didn't confess directly and clear my intentions. I didn’t know if you would ever see me the way I see you. Then one day I actually came back in rp, then I felt differently, you made me fall in love with you.
+        <br><br>
+        And somehow, everything changed.
+        <br><br>
+        On September 29, 2025, you became mine — and I became yours. I’ll never forget that date. Not because it’s just our anniversary, but because it’s the day my silent crush turned into something real.
+        <br><br>
+        Sometimes I still can’t believe it. The girl I used to admire from afar is now the one I call my girlfriend. The one I talk to not every day. The one I have a crush on is now the one I want to build a future with.
+        <br><br>
+        You don't know how much I thank God for giving you to me.
+        <br><br>
+        From being intimidated by you…<br>
+        To admiring you…<br>
+        To crushing on you for six months…<br>
+        To loving you now.
+        <br><br>
+        I’m so glad I didn’t give up on my feelings. And I’m even more grateful that you chose me.
+        <br><br>
+        September 29, 2025 will always be special to me — because that’s the day my biggest crush became my greatest blessing. 💗
+        </p>
+    </div>
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="goBack()">⬅️ Back</button>
+
+    <script>
+        function goBack() {
+            window.location.href = "surprise.html";
+        }
+    </script>
+
+</body>
+</html>

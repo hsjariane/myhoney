@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You 💕</title>
+
+    <!-- Mobile responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Video background */
+        #bgVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        /* Overlay to make text/buttons readable */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.25); /* slight dark overlay */
+            z-index: -1;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 22px;
+            text-shadow: 0 0 10px #a855f7, 0 0 20px #ec4899;
+            animation: floatText 3s ease-in-out infinite;
+        }
+
+        @keyframes floatText {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .btn {
+            padding: 18px;
+            width: 100%;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            animation: bounce 2s infinite;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-6px);}
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="heart2.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Optional overlay for readability -->
+    <div class="overlay"></div>
+
+    <h2>Choose One 💜</h2>
+
+    <div class="container">
+        <button class="btn" onclick="goToPage('thefirsttimewemet.html')">
+            🌸 The First We Met
+        </button>
+
+        <button class="btn" onclick="goToPage('myfeelingsforyou.html')">
+            💖 My Feelings For You
+        </button>
+
+        <button class="btn" onclick="goToPage('theplanforus.html')">
+            🌷 The Plan For Us
+        </button>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
